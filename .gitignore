@@ -1,0 +1,1 @@
+# Ignore Gradle build directory\nbuild/\n\n# Ignore Gradle wrapper files\n.gradle/\ngradle/wrapper/gradle-wrapper.jar\n\n# Ignore other generated files\n*.class\n*.jar\n*.war\n*.ear
