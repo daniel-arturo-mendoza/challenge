@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+springBoot {
+    mainClass = 'com.playgami.challenge.Application'
+}
+
+bootJar {
+    archiveFileName = 'MemDB.jar'
+    manifest {
+        attributes 'Main-Class': 'org.springframework.boot.loader.launch.JarLauncher'
+        attributes 'Start-Class': 'com.playgami.challenge.Application'
+    }
+}
+
+jar {
+    enabled = false
+} 
